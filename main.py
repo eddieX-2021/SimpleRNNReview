@@ -11,7 +11,7 @@ def main():
     with open('mal_tokenizer.pkl', 'rb') as f:
         tokenizer = pickle.load(f)
     
-    model = load_model('mal_reviews_sentiment_rnn.h5')  # Your trained model
+    model = load_model('anime_review_model.h5')  # Your trained model
 
     def preprocess_text(text):
         """Convert raw text to model-ready input"""
@@ -32,7 +32,7 @@ def main():
             processed_input = preprocess_text(review_text)
             prediction = model.predict(processed_input)
             confidence = float(prediction[0][0])
-            sentiment = 'Positive' if confidence > 0.5 else 'Negative'
+            sentiment = 'Positive' if confidence > 0.4 else 'Negative'
             
             # Display results
             st.subheader('Result:')
