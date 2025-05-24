@@ -1,50 +1,50 @@
-# Anime Review Sentiment Analysis using Simple RNN
+# Anime Review Sentiment Analysis using Simple RNN 🎭
 
-This project is a **text classification system** designed to predict sentiment (Positive or Negative) from anime reviews scraped from MyAnimeList (MAL). It utilizes a **Simple Recurrent Neural Network (RNN)** built with TensorFlow/Keras. The front-end interface is powered by **Streamlit** for interactive inference.
+This project is a text classification system designed to predict sentiment (Positive or Negative) from anime reviews scraped from MyAnimeList (MAL). It utilizes a Simple Recurrent Neural Network (RNN) built with TensorFlow/Keras, with a Streamlit-powered front-end interface.
 
----
+![Sentiment Analysis](https://via.placeholder.com/800x400?text=Anime+Sentiment+Analysis+Demo) *(placeholder for project screenshot)*
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
+### Prerequisites
+- Python 3.7+
+- pip
+
+### Installation
 ```bash
+# Clone the repository
 git clone https://github.com/your-username/anime-sentiment-rnn.git
 cd anime-sentiment-rnn
 
+# Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
+# Install dependencies
 pip install -r requirements.txt
 
-pip install tensorflow streamlit scikit-learn pandas numpy
 
+## 🧠 Model Training
 
 To train the sentiment classification model on MAL reviews:
 
-Load the dataset from the CSV (e.g., reviews.csv)  (dataset is avaiable on kaggle it is not here because it is too big)
+1. Load the dataset from `reviews.csv` (available on Kaggle)
+2. Preprocess the review texts and binarize the review scores
+3. Tokenize and pad the sequences
+4. Build a Simple RNN model
+5. Train the model with early stopping
 
-Preprocess the review texts and binarize the review scores
-
-Tokenize and pad the sequences
-
-Build a Simple RNN model
-
-Train the model with early stopping
-
-Training is done in the provided notebook: simplernn.ipynb
+Training is done in the provided notebook: `simplernn.ipynb`
 
 After training:
+- Tokenizer saved as `mal_tokenizer.pkl`
+- Model saved as `anime_review_model.h5`
 
-Tokenizer saved as mal_tokenizer.pkl
-
-Model saved as anime_review_model.h5
-
+## 💻 Running the Web App
 
 Launch the Streamlit web app:
-
-bash
+```bash
 streamlit run main.py
-You'll see an interface to input anime reviews and get predicted sentiment with confidence level.
 
 
 📌 Project Purpose
