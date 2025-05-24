@@ -1,0 +1,34 @@
+# .gitignore
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Data and artifacts
+*.joblib
+
+# Logs
+logs/
+*.log
+
+# Environment files
+.env
+.env.*
+
+# CSV files - THIS IS WHAT YOU NEED TO ADD
+*.csv
+*.csv.*
+reviews.csv
+
+# VSCode settings
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
